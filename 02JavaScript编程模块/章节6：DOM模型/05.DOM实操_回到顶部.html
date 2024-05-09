@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM实操_回到顶部</title>
+    <style>
+        div {
+            /* 内容的宽度和高度会充满整个父元素的宽度和高度  */
+            width: 100%;
+            /* 撑开内容的高度 */
+            height: 500px;
+            background-color: #f2f2f2;
+            margin-bottom: 20px;
+        }
+        /* 按钮的样式 */
+        #btn {
+            /* 按钮的宽度和高度会充满整个父元素的宽度和高度  */
+            display: block;
+            width: 100px;
+            height: 50px;
+            /* 按钮的文字垂直居中 */
+            line-height: 50px;
+            /* 按钮的文字水平居中 */
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            /* 按钮的边框会变成圆角 */
+            border-radius: 5px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            /* 鼠标悬停在按钮上时，鼠标的形状会变成一个手型 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 回到顶部按钮的实现 -->
+    <!-- 回到顶部按钮的作用，是为了方便用户快速回到顶部，是指当页面内容过多时，可以点击按钮，快速回到页面顶部。 --> 
+    <div>内容1</div>
+    <div>内容2</div>
+    <div>内容3</div>
+    <div>内容4</div>
+    <div>内容5</div>
+    <div>内容6</div>
+    <div>内容7</div>
+    <!-- 按钮的实现 -->
+    <a href="javascript:void(0)" id="btn">回到顶部</a>
+    <script>
+        // 回到顶部的函数
+        var btn = document.getElementById("btn");
+        // 点击按钮，页面滚动到顶部
+        btn.onclick = function() {
+            // 页面滚动到顶部
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

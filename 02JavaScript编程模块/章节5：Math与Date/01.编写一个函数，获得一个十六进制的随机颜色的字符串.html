@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编写一个函数,获得一个十六进制的随机颜色的字符串方法</title>
+</head>
+
+<body>
+    <button onclick="getColor()">点击一下，随机出现颜色</button>
+    <p id="colorText"></p>
+    <script>
+        //编写一个函数
+        //十六进制：#000000 #FFFFFF: #0123456789abcdef
+        //十六进制的颜色之组成位数:6位
+        //1.首先定义了一个包含十六进制数字的字符串，并创建了一个以"#"开头的color变量。
+        function getColor() {
+            var str = "0123456789abcdef";
+            var color = "#";
+            //2.通过循环生成6次随机的0到15之间的整数
+            for (var i = 0; i < 6; i++) {
+                var num = Math.floor(Math.random() * str.length);
+                //3.将对应位置的十六进制数字添加到color变量中，最终返回生成的随机颜色代码。
+                color = color + str[num];
+            }
+            //4.生成的随机颜色字符串赋值给 colorText 元素的文本内容，以便在页面上显示这个随机颜色。
+            document.getElementById('colorText').textContent = color;
+        }
+    </script>
+</body>
+
+</html>

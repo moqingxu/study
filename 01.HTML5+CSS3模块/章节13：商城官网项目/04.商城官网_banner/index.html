@@ -1,0 +1,153 @@
+​<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米</title>
+    <!-- 全局样式基本上所有文档都需要 
+    正式开始开发网站的话就不能写内联样式的，需要使用外接，利用链接引入-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mi.css">
+    <!-- 引用图标的界面 -->
+    <link rel="stylesheet" href="css/iconfont/iconfont.css">
+</head>
+<body>
+    <!-- 头部广告条开始 -->
+    <div class="header">
+        <a href="#">
+            <img src="img/top.jpg" alt="顶部广告条">
+        </a>
+    </div>
+    <!-- 头部广告条结束 -->
+    <!-- 黑色导航部分开始 -->
+    <!-- 1、黑色背景，主容器 
+        2、内容部分要居中显示，容器进行处理
+        3、左导航栏和右导航
+        4、动画——有一个图片出现，右导航有个效果
+    -->
+    <div class="black-nav">
+        <div class="wrap">
+            <ul class="black-nav-left">
+                <li><a href="#">小米商城</a><span>|</span></li>
+                <li><a href="#">MIUI</a><span>|</span></li>
+                <li><a href="#">Lot</a><span>|</span></li>
+                <li><a href="#">云服务</a><span>|</span></li>
+                <li><a href="#">天星数科</a><span>|</span></li>
+                <li><a href="#">有品</a><span>|</span></li>
+                <li><a href="#">小爱开放平台</a><span>|</span></li>
+                <li><a href="#">企业团购</a><span>|</span></li>
+                <li><a href="#">资质证照</a><span>|</span></li>
+                <li><a href="#">协议规则</a><span>|</span></li>
+                <li>
+                    <a href="#">下载APP</a>
+                    <span>|</span>
+                    <!-- 点击下载APP会出现一个图案 -->
+                    <div class="download">
+                        <img src="img/download.png" alt="下载二维码">
+                        <p>小米商城APP</p>
+                    </div>
+                    <!-- 点击下载APP出现的图框还有个箭头呢 -->
+                    <div class="stri"></div>
+                </li>
+                <li><a href="#">智能生活</a><span>|</span></li>
+                <li><a href="#">Select Location</a><span>|</span></li>
+            </ul>
+            <ul class="black-nav-right">
+                <li><a href="#">登录</a><span>|</span></li>
+                <li><a href="#">注册</a><span>|</span></li>
+                <li><a href="#">消息通知</a><span>|</span></li>
+                <li class="cart">
+                    <a href="#">
+                        <span class="iconfont">&#xe607;</span>
+                        <i>购物车（0）</i>
+                    </a>
+                    <!-- 点击购物车会出现相应文字和效果 -->
+                    <div class="cart-list">
+                        购物车中还没有商品，赶紧选购吧
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 黑色导航部分结束 -->
+    <!-- 白色导航开始 -->
+    <div class="white-nav">
+        <div class="wrap">
+            <div class="logo">
+                <img src="./img/mi-home.png" alt="mi-home">
+                <img src="./img/mi-logo.png" alt="mi-log">
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="#"><img src="./img/zzxsh.gif" alt=""></a></li>
+                    <li>
+                        <a href="#">小米手机</a>
+                        <div class="nav-bar-list">
+                            <div class="wrap">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-box">
+                                            <img src="./img/phone.png" alt="">
+                                            </div>
+                                            <p class="name1">小米10至尊纪念版</p>
+                                            <p class="price1">5299元起</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-box">
+                                            <img src="./img/phone.png" alt="">
+                                            </div>
+                                            <p class="name1">小米10至尊纪念版</p>
+                                            <p class="price1">5299元起</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-box">
+                                            <img src="./img/phone.png" alt="">
+                                            </div>
+                                            <p class="name1">小米10至尊纪念版</p>
+                                            <p class="price1">5299元起</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-box">
+                                            <img src="./img/phone.png" alt="">
+                                            </div>
+                                            <p class="name1">小米10至尊纪念版</p>
+                                            <p class="price1">5299元起</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Redmi红米</a></li>
+                    <li><a href="#">电视</a></li>
+                    <li><a href="#">笔记本</a></li>
+                    <li><a href="#">家电</a></li>
+                    <li><a href="#">路由器</a></li>
+                    <li><a href="#">智能硬件</a></li>
+                    <li><a href="#">服务</a></li>
+                    <li><a href="#">社区</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" value="赢手机，分一亿">
+                <!-- 插入放大镜也就是搜索的图标 -->
+                <button class="iconfont">&#xe63d;</button>
+                <div class="search-list"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 白色导航结束 -->
+    <!-- banner部分开始 -->
+    
+    <!-- banner部分结束 -->
+</body>
+</html> 
+
+​

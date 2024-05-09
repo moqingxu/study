@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM实操_瀑布流_页面布局</title>
+    <style>
+        /* 设置了全局的 padding 和 margin 为 0，使页面元素间距为 0 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* 使其成为相对定位的容器 */
+        #container {
+            position: relative;
+        }
+        /* 设置.box 类的元素为浮动布局，并给其设置了一些内边距 */
+        .box {
+            padding: 5px;
+            float: left;
+        }
+        /* 设置.boximg 类的元素的一些样式，包括内边距、阴影、边框和圆角*/
+        .boximg {
+            padding: 5px;
+            box-shadow: 0 0 5px #ccc;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* 设置.boximg img 元素的宽度为 250 像素，高度自适应 */
+        .boximg img {
+            width: 250px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="box">
+            <div class="boximg">
+                <img src="img/1.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/2.png" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/3.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/4.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/5.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/6.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/7.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/8.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/9.png" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/10.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/11.png" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/10.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/11.png" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/10.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/11.png" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/10.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="boximg">
+                <img src="./img/11.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="02.index.js"></script>
+</body>
+</body>
+
+</html>

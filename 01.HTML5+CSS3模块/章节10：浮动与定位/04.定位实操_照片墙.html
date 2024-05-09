@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位实操_照片墙</title>
+    <style>
+        /* 宽高，左右居中，设置边框线 相对定位 */
+        .wall{
+            width: 960px;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px rgb(128, 128, 128) double;
+            position: relative;
+        }
+        /* 设置图片宽度，设置边框，绝对定位 */
+        .wall img {
+            width: 200px;
+            border: 10px solid #f1f1f1;
+            position: absolute;
+        }
+         /* 
+            CSS3新特性
+                设置定位之后，才可以使用
+                1. 动画-旋转：transform:rotate(-10deg)
+        */
+        .img1 {
+            top: 0;
+            left: 10px;
+            transform: rotate(0deg);
+        }
+
+        .img2 {
+            transform: rotate(5deg);
+            top: 20px;
+            left: 220px;
+        }
+
+        .img3 {
+            transform: rotate(-20deg);
+            top: 40px;
+            left: 450px;
+        }
+
+        .img4 {
+            transform: rotate(-5deg);
+            top: 30px;
+            left: 700px;
+        }
+
+        .img5 {
+            transform: rotate(20deg);
+            top: 100px;
+            left: 10px;
+        }
+
+        .img6 {
+            transform: rotate(-5deg);
+            top: 160px;
+            left: 350px;
+        }
+
+        .img7 {
+            transform: rotate(-5deg);
+            top: 300px;
+            left: 0px;
+        }
+
+        .img8 {
+            transform: rotate(5deg);
+            top: 270px;
+            left: 180px;
+        }
+
+        .img9 {
+            transform: rotate(-10deg);
+            top: 290px;
+            left: 370px;
+        }
+
+        .img10 {
+            transform: rotate(20deg);
+            top: 280px;
+            left: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wall">
+        <img class="img1" src="../img/1.jpg">
+        <img class="img2" src="../img/2.jpg">
+        <img class="img3" src="../img/3.jpg">
+        <img class="img4" src="../img/4.jpg">
+        <img class="img5" src="../img/5.jpg">
+        <img class="img6" src="../img/6.jpg">
+        <img class="img7" src="../img/7.jpg">
+        <img class="img8" src="../img/8.jpg">
+        <img class="img9" src="../img/9.png">
+        <img class="img10" src="../img/10.jpg">
+    </div>
+</body>
+</html>

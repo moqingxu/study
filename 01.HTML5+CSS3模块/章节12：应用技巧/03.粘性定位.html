@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粘性定位</title>
+    <style>
+        /* 清除所有样式 */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* 设置总体的背景色
+        .container{
+            background-color: #fff;
+        } */
+        /* 设置图片板块的宽度和背景色 */
+        .image{
+            background-color:#fc0c2c;
+            width:100% ;
+        }
+        /* 宽高根据图片本身的宽高来设置 
+        定级为块级元素，设置左右居中*/
+        .image img{
+            display: block;
+            width: 1190px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        /* 设置搜索栏宽度，左右居中 */
+        .search{
+            width: 80%;
+            margin: 0 auto;
+        }
+        /* 设置导航栏链接的宽高 */
+        .nav{
+            width: 100%;
+            /* 设置高度是行高的两倍，是为了防止标题1从下面跑上来 */
+            height: 100px;
+            line-height: 50px;
+            /* 设置粘性定位，上边距 */
+            position: sticky;
+            top: 5px;
+        }
+        /* 去掉列表前面样式，设置左浮动，设置右边距为10px */
+        .nav ul{
+            list-style: none;
+        }
+        .nav ul li{
+            float: left;
+            padding: 0 10px;
+        }
+        /* 撑开内容的高度，方便后续滚动 */
+        h3{
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="taobao.jpg" alt="年货节广告">
+        </div>
+        <div class="search">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <input type="search" name="search">
+                        <input type="button" value="搜索">
+                    </li><br>
+                    <li>导航栏1</li>
+                    <li>导航栏2</li>
+                    <li>导航栏3</li>
+                    <li>导航栏4</li>
+                    <li>导航栏5</li>
+                    <li>导航栏6</li>
+                </ul>
+            </div>
+            <div class="body">
+                <h3>标题1</h3>
+                <h3>标题2</h3>
+                <h3>标题3</h3>
+                <h3>标题4</h3>
+                <h3>标题5</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

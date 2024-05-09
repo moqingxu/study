@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>透明度设置</title>
+    <style>
+        .one{
+            width: 300px;
+            height: 200px;
+            background: red;
+            /* 背景颜色的透明度，半透明设置为0.5 */
+            opacity: 0.5;
+        }
+        .two{
+            width: 300px;
+            height: 200px;
+            /* 颜色的最后一个属性是透明度设置 */
+            background:rgba(0, 0, 0,0.5) ;
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一种：透明属性 -->
+    <div class="one">
+        我只是一个平平无奇的盒子罢了
+    </div>
+    <!-- 第二种：利用rgba颜色进行改变 -->
+    <div class="two">
+        我只是一个平平无奇的盒子罢了
+    </div>
+</body>
+</html>

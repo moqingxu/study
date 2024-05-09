@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建一个函数，传递两个参数，返回两个参数的相乘和相加的和</title>
+</head>
+
+<body>
+    <script>
+        //函数，两者相加
+        function add(a, b) {
+            return a + b;
+        }
+        //函数，两者相乘
+        function mult(c,d) {
+            return c*d;
+        }
+        function result(e,f) {
+            return add(e,f)+mult(e,f);
+        }
+        console.log(result(4,7));//4+7+4*7=39
+    </script>
+
+</body>
+
+</html>

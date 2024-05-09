@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用Grid布局完成九宫格</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        /* grid-template-columns 属性定义每一列的列宽， grid-template-rows 属性定义每一行的行高
+        定义一个三行三列的网格，列宽和行高都是 100px ，使用了网格布局，就无须单独控制子项的宽高 */
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+    }
+    .it{
+        border: 1px solid gold;
+        /* 让文字在div中垂直水平居中 */
+        line-height: 100px;
+        text-align: center;
+    }
+    .item1{
+        background-color: pink;
+    }
+    .item2{
+        background-color: blueviolet;
+    }
+    .item3{
+        background-color: forestgreen;
+    }
+    .item4{
+        background-color: brown;
+    }
+    .item5{
+        background-color: darkolivegreen;
+    }
+    .item6{
+        background-color: darkorange;
+    }
+    .item7{
+        background-color: fuchsia;
+    }
+    .item8{
+        background-color: violet;
+    }
+    .item9{
+        background-color: navy;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="it item1">1</div>        
+        <div class="it item2">2</div>
+        <div class="it item3">3</div>      
+        <div class="it item4">4</div>        
+        <div class="it item5">5</div>
+        <div class="it item6">6</div>
+        <div class="it item7">7</div>
+        <div class="it item8">8</div>        
+        <div class="it item9">9</div>
+    </div>
+</body>
+</html>

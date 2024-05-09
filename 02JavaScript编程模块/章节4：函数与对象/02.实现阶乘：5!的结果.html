@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实现阶乘：5!的结果</title>
+</head>
+<body>
+    <script>
+        //阶乘！就是指连成，例如5！=1*2*3*4*5
+        function fact(num) {
+            if(num<=1){
+                return 1;
+            }else{
+                return num*fact(num-1);
+            }
+        }
+        var result=fact(5);
+        console.log(result);
+    </script>
+</body>
+</html>

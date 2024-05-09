@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判断一个年份是闰年还是平年</title>
+</head>
+<body>
+    <script>
+        // 闰年公式：是4的倍数且不是100的倍数或是400的倍数
+        var year=2034;
+        if (year%4==0&&year%100!=0||year%400==0) {
+            console.log(year+"是闰年");
+        } else {
+            console.log(year+"是平年");
+        }
+    </script>
+</body>
+</html>

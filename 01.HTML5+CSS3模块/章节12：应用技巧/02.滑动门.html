@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑动门效果</title>
+    <link rel="stylesheet" href="iconfont.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 设置整体侧边栏的宽高和背景色，相对定位，内边距设置为100px */
+        .nav{
+            width: 240px;
+            height: 410px;
+            background-color: rgba(105, 101, 101, 0.6);
+            padding: 20px 0;
+            position: relative;
+            margin: 100px;
+        }
+        /* 去除无序列表的样式 */
+        .nav ul{
+            list-style: none;
+        }
+        /* 设置宽度和浏览器一样，左对齐，让其垂直居中 */
+        .nav ul li{
+            width: 100%;
+            height: 50px;
+            text-align: left;
+            line-height: 40px;
+            padding-left: 30px;
+            /* box-sizing：border-box；该属性设置了 margin、padding、border 之后不会撑大盒子。 
+            也可以使用overflow:hidden*/
+            box-sizing: border-box;
+        }
+        /* 鼠标悬停时超链接显示的背景 */
+        .nav ul li:hover{
+            background: #ff6700;
+        }
+        /* 超链接设置为行内块元素，去除下划线，文字颜色设为白色 */
+        .nav ul li a{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+        }
+        /* 设置宽高，背景色，边框。 */
+        .list{
+            width: 900px;
+            height: 450px;
+            background-color: #fff;
+            border: 1px solid gray;
+            border-left: none;
+            box-sizing: border-box;
+            position: absolute;
+            /* 上边，左边间距 */
+            top:0;
+            left: 240px;
+            display: none;
+            
+        }
+        .nav li:hover>.list{
+            display: block;
+        }
+        /* 箭头的样式、位置 */
+        .iconfont{
+            display: inline-block;
+            font-size: 25px;
+            color: #fff;
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">手机</a>
+                <span class="iconfont icon-ico_listarrow"></span>
+                <div class="list">我是相应导航下的界面呢，但是我还没有出现哦，别急</div>
+            </li>
+            <li>
+                <a href="#">电视</a>
+                <span class="iconfont icon-ico_listarrow"></span>
+                <div class="list">我是相应导航下的界面呢，但是我还没有出现哦，别急2</div>
+            </li>
+            <li>
+                <a href="#">平板</a>
+                <span class="iconfont icon-ico_listarrow"></span>
+                <div class="list">我是相应导航下的界面呢，但是我还没有出现哦，别急3</div>
+            </li>
+            <li>
+                <a href="#">家电</a>
+                <span class="iconfont icon-ico_listarrow"></span>
+                <div class="list">我是相应导航下的界面呢，但是我还没有出现哦，别急4</div>
+            </li>
+            <li>
+                <a href="#">智能</a>
+                <span class="iconfont icon-ico_listarrow"></span>
+                <div class="list">我是相应导航下的界面呢，但是我还没有出现哦，别急5</div>
+            </li>
+            <li>
+                <a href="#">配件</a>
+                <span class="iconfont icon-ico_listarrow"></span>
+                <div class="list">我是相应导航下的界面呢，但是我还没有出现哦，别急6</div>
+            </li>
+            <li>
+                <a href="#">耳机</a>
+                <span class="iconfont icon-ico_listarrow"></span>
+                <div class="list">我是相应导航下的界面呢，但是我还没有出现哦，别急7</div>
+            </li>
+            <li>
+                <a href="#">饰品</a>
+                <span class="iconfont icon-ico_listarrow"></span>
+                <div class="list">我是相应导航下的界面呢，但是我还没有出现哦，别急8</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

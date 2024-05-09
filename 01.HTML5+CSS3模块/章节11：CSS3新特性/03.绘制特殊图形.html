@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- width = device-width 宽度等于当前设备的宽度
+    initial-scale 初始的缩放比例（默认设置为1.0）
+    maximum-scale 允许用户缩放到的最大比例（默认设置为1.0）
+    user-scalable 用户是否可以手动缩放（默认设置为no） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘制特殊图形</title>
+    <style>
+        /*绘制正三角形
+        主要是利用border属性，设置内容区宽高值为0
+        将其下边设置为可见，其他边设为透明
+        想要倒三角形也是一样，只要设置上边可见，其他边透明即可 */
+        .one{
+            width: 0;
+            height: 0;
+            /* border-top: 50px solid red; */
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;  
+            border-bottom: 50px solid blue;
+            text-align: center;
+        }
+        /* 绘制梯形
+        设置100的宽度 */
+        .two{
+            width: 100px;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;  
+            border-bottom: 50px solid rgb(255, 0, 200);
+        }
+         /*绘制向右的三角形
+        主要是利用border属性，设置内容区宽高值为0
+        将其左边设置为可见，其他边设为透明
+        想要向左三角形也是一样，只要设置右边可见，其他边透明即可 */
+        .three{
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-left: 50px solid red;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <br>
+    <div class="two"></div>
+    <br>
+    <div class="three"></div>
+</body>
+</html>

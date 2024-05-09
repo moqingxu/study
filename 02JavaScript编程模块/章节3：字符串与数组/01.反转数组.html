@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反转数组</title>
+</head>
+<body>
+    <script>
+        var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+        //reverse()是让数组反转的方法，此法同时也可以让字符串反转
+        var result = arr.reverse();
+        console.log(result);
+
+        var a="yfiwehfj";
+        //split方法按照给定规则分割字符串，返回一个由分割出来的子字符串组成的数组
+        //join方法以指定参数作为分隔符，将所有数组成员连接为一个字符串返回。如果不提供参数，默认用逗号分隔
+        var result1=a.split("").reverse().join("");
+        console.log(result1);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>怪异盒模型(IE盒子模型)</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 2px dotted red;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+   <div>
+    在该模式下，浏览器的 width 属性不是内容的宽度，而是内容、内边距和边框的宽度的总和；
+    <br>即在怪异模式下的盒模型，盒子的<br>
+    （content）宽度+内边距padding+边框border宽度=我们设置的width(height也是如此)
+    <br>盒子总宽度/高度=width/height + margin
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入月份，显示当月的天数</title>
+</head>
+<body>
+    <script>
+        var year=2024;
+        var month=2;
+        switch (month) {
+            case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+                console.log(year+"年"+month+"月有31天！");
+                break;
+            case 2:
+                if (year%4==0&&year%100!=0||year%400==0) {
+                    console.log(year+"年"+month+"月有29天！");
+                } else {
+                    console.log(year+"年"+month+"月有28天！");
+                }
+                break;
+            case 4:case 6:case 9:case 11:
+                console.log(year+"年"+month+"月有30天！");
+                break;
+            default:
+                console.log("请输入正确的数字！！");
+        }
+    </script>
+</body>
+</html>

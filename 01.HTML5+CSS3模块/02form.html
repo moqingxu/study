@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="http://moya.top" method="get" name="question">
+    Firstname:<input type="text" name="Firstname">
+    <br>
+    Lastname:<input type="text" name="Lastname"><br>
+    Password <input type="password" name="password"><br>
+    性别：<input type="radio" name="sex" value="男">男
+    <input type="radio" name="sex" value="女">女
+    交通方式：<input type="checkbox" name="vehicle" value="car">汽车
+    <input type="checkbox" name="vehicle" value="bike">自行车
+    <br>
+    <input type="submit" value="提交">
+    <input type="reset" value="重置">
+    <br>
+    <input type="button" value="点我，我是普通按钮">
+    <input type="image" src="2.png" alt="图片按钮">
+    喜欢的：
+    <select>
+        <optgroup>水果
+            <option value="apple" id="apple">苹果</option>
+            <option value="banana">香蕉</option>
+            <label for="apple"></label>
+        </optgroup>
+        <optgroup>饮料
+            <option value="colo">可乐</option>
+            <option value="water">水</option>
+        </optgroup>
+    </select><br>
+    <textarea cols="30" rows="10">文本框本框</textarea><br>
+    email: <input type="email" name="useremail"><br>
+    url: <input type="url" name="homepage">
+    <input type="submit" value="提交"><br>
+    百度搜索: <input type="search" name="baidusearch" autofocus placeholder="25加油" required>
+    <!-- autofocus会自动获取焦点
+    placeholder 属性提供一种提示（hint），描述输入域所期待的值
+    required 属性规定必须在提交之前填写输入域（不能为空）-->
+    <input type="submit" value="提交"><br>
+    电话号码：<input type="tel" name="userphone"><br>
+    你喜欢的颜色: <input type="color" name="usercolor">
+    <input type="submit" value="提交"><br>
+    url: <input type="url" name="homepage">
+    <input type="submit" value="提交"><br>
+    数字（2-9之间）<input type="number" name="number" min="2" max="9"><input type="submit" value="提交"><br>
+    随机控件：<input type="range" name="range" min="12" max="95"><input type="submit" value="提交"><br>
+    生日(年月日)：<input type="date" name="birthday"><input type="submit" value="提交"><br>
+    生日(年月)：<input type="month" name="birthmonth"><input type="submit" value="提交"><br>
+    生日(年周)：<input type="week" name="birthweek"><input type="submit" value="提交"><br>
+   </form>
+
+   <!-- 表单实操1 -->
+
+   <table border="1" cellspacing="0" width="600px" height="400px" align="center">
+    <tr align="center">
+        <td colspan="4">教员搜索</td>
+    </tr>
+    <tr>
+        <td>搜索类型</td>
+        <td>
+            <select name="username">
+                <option>搜索教员信息</option>
+                <option>张东</option>
+                <option>粉丝</option>
+            </select>
+        </td>
+        <td>教员身份</td>
+        <td>
+            <select name="usertype">
+                <option>不限</option>
+                <option>学生</option>
+                <option>职业</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>所在地区</td>
+        <td>
+            <select name="address">
+                <option>不限</option>
+                <option>上海</option>
+                <option>北京</option>
+            </select>
+        </td>
+        <td>性别</td>
+        <td>
+            <input type="radio">男<br>
+            <input type="radio">女
+        </td>
+    </tr>
+    <tr>
+        <td>学习科目</td>
+        <td colspan="3">
+            <select name="class">
+                <option>请在以下列表中选择</option>
+                <option>语文</option>
+                <option>数学</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>学习</td>
+        <td colspan="3">
+            <textarea cols="30" rows="1" placeholder="请输入要学习的内容"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>专业</td>
+        <td colspan="3">
+            <textarea cols="30" rows="1" placeholder="请输入要学习的内容"></textarea>
+            <input type="button" value="搜索">
+        </td>
+    </tr>
+   </table>
+      <!-- 表单实操1 -->
+      <form action="http://" name="message">
+        <table align="center">
+            <tr>
+              <td align="right">姓名：</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td align="right">密码：</td>
+              <td><input type="password"></td>
+            </tr>
+            <tr>
+              <td align="right">确认密码：</td>
+              <td><input type="password"></td>
+            </tr>
+            <tr>
+              <td align="right">密码提示问题：</td>
+              <td>
+                <select>
+                  <option value="title">请选择一个问题</option>
+                  <option value="name">我的名字</option>
+                  <option value="sex">我的性s别</option>
+                  <option value="age">我的年龄</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">密码提示答案：</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td align="right">性别：</td>
+              <td>
+                <form>
+                  <input type="radio" name="sex" value="nan">男
+                  <br>
+                  <input type="radio" name="sex" value="nv">女
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">年龄：</td>
+              <td><input type="number"></td>
+            </tr>
+            <tr>
+              <td align="right">籍贯：</td>
+              <td>
+                <select>
+                  <option value="title">请选择</option>
+                  <option value="name">内蒙古</option>
+                  <option value="sex">陕西</option>
+                  <option value="age">山西</option>
+                </select>
+                 省/直辖市
+                <select>
+                  <option value="title">请选择</option>
+                  <option value="name">太原</option>
+                  <option value="sex">临汾</option>
+                  <option value="age">大同</option>
+                </select>
+                 市
+              </td>
+            </tr>
+            <tr>
+              <td align="right">爱好：</td>
+              <td>
+                <form>
+                  <input type="checkbox" name="vehicle" value="sw">上网
+                  <input type="checkbox" name="vehicle" value="m">看电影
+                  <input type="checkbox" name="vehicle" value="l">学习
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">个人介绍：</td>
+              <td>
+                <form name="input" action="url" method="get">
+                  <textarea rows="10" cols="30"></textarea>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">上传头像：</td>
+              <td>
+                <form>
+                  <input type="file" name="img">
+                </form>
+              </td>
+            </tr>
+            <tr align="center">
+              <td colspan="2">
+                <input type="submit" value="提交">
+                <input type="reset" value="重置">
+              </td>
+            </tr>
+          </table>
+          
+      </form>
+</body>
+</html>

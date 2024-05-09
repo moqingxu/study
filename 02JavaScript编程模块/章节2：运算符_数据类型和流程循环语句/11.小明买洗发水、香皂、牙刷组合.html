@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小明买洗发水、香皂、牙刷组合</title>
+</head>
+<body>
+    <script>
+        /**小明单位发了100元的购物卡，
+        小明到超市买三类洗化用品，
+        洗发水（15元），香皂（2元），牙刷（5元）
+        要把100元整好花掉，有哪些购买结合？**/
+        //只买洗发水，不能超过6个；只买香皂，不能朝贡50个，只买牙刷，不能超过20个
+        //加一个计数变量，每执行一次，就计数一次，从1开始，开头设置为0，要进行下一次循环，就要先自增一次
+        var d=0;
+        for (var a = 0; a<=6; a++) {
+            for (var b = 0; b<=50; b++) {
+                for (var c = 0; c<=20; c++) {
+                    //是正好花掉，所以会设置==，如果是花在100以内，那么可以用<=
+                    if (a*15+b*2+c*5==100) {
+                        document.write(++d+"、洗发水:"+a+"香皂:"+b+"牙刷:"+c+"<br />");
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

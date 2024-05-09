@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时获得页面滚动高度</title>
+
+    
+</head>
+<body>
+    <div style="height: 2000px;background-color: #f0f0f0;">
+        <p>获取页面滚动高度</p>
+        <p>用height设置可以用来撑开页面的高度，使得页面滚动条出现。</p>
+        <p>用window.pageYOffset、window.scrollY、document.documentElement.scrollTop、document.body.scrollTop获取页面滚动高度。</p>
+    </div>
+    <script>
+        //window.onscroll：当页面滚动时触发的事件。
+        //document.documentElement.scrollTop：返回页面垂直滚动的距离，即页面顶端到当前可见内容顶端的距离。
+        //document.body.scrollTop：返回页面垂直滚动的距离，即页面顶端到当前可见内容顶端的距离。
+        window.onscroll=function(){
+            var scrollHeight=document.documentElement.scrollTop||document.body.scrollTop;
+            console.log("当前页面滚动高度："+scrollHeight);
+        };
+    </script>
+</body>
+</html>

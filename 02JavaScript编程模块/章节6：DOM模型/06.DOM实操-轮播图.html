@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM实操-轮播图</title>
+    <style>
+        /* CSS样式,设置轮播图的基本样式 */
+        * {
+            /* 清除默认样式 */
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            /* 设置轮播图的容器 */
+            width: 672px;
+            height: 320px;
+            border: 1px solid gray;
+            /* 居中 */
+            margin:100px auto;
+            /* 设置轮播图的位置,相对定位 */
+            position: relative;
+        }
+       ul {
+            list-style: none;
+        }
+       .imglist ul li {
+            width: 672px;
+            height: 320px;
+            position: absolute;
+            /*代表图片的位置从顶部开始,左边开始*/
+            top: 0;
+            left: 0;
+            /*代表图片默认隐藏 */
+            display: none;
+        }
+       .imglist ul li.current {
+             /* 代表图片默认显示  */
+            display: block;
+        }
+        /* 设置左右切换按钮 */
+       .btn span {
+            width: 55px;
+            height: 55px;
+            background: url("06img/left.png");
+            position: absolute;
+            top: 50%;
+            margin-top: -27px;
+        }
+       .btn span.leftbtn {  
+            left: 10px;
+        }
+       .btn span.rightbtn {
+            right: 10px;
+            background: url("06img/right.png") ;
+        }
+       .circle {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+       .circle ul li{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        float: left;
+        margin-right: 10px;
+        }
+       .circle ul li.current {
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- 焦点轮播图是通过定时器实现的，每隔2秒切换到下一张图片，并隐藏当前图片，显示下一张图片。
+        这种方式使用一套图片以一定时间间隔进行循环播放，可以营造出一种轮播的效果。 -->
+        <!-- 轮播图特点：
+          ①自动循环播放
+          ②指示器聚焦导航 -->
+    <div class="box">
+        <div class="imglist" id="imglist">
+            <ul>
+                <li class="current"><a href="#"><img src="06img/1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="06img/2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="06img/3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="06img/4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="06img/5.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <!-- 设置左右切换按钮 -->
+        <div class="btn">
+            <span class="leftbtn" id="left"></span>
+            <span class="rightbtn" id="right"></span>
+        </div>
+        <!-- 设置指示器 -->
+        <div class="circle" id="circle">
+            <ul>
+                <li class="current"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+       /*  1. 首先，我们需要获取DOM元素，包括轮播图的容器、图片列表、左右按钮、指示器。
+        2. 然后，我们需要设置定时器，每隔2秒切换到下一张图片，并隐藏当前图片，显示下一张图片。
+        3. 最后，我们需要设置左右按钮的点击事件，点击按钮切换到上一张或下一张图片，并更新指示器的状态。 */
+        // 1. 获取DOM元素
+        var imglis= document.getElementById("imglist").querySelectorAll("li");
+        var leftBtn = document.getElementById("left");
+        var rightBtn = document.getElementById("right");
+        var circles = document.getElementById("circle").querySelectorAll("li");
+        // 2. 设置定时器
+        var index = 0;
+        leftBtn.onclick = function(){
+            index++;
+            console.log(index);
+            changePic();
+        }
+        rightBtn.onclick = function(){
+            index--;
+            console.log(index);
+            changePic();
+        }
+        // 控制页面图片显示与隐藏
+        function changePic(){
+            //index边界处理
+            if(index>imglis.length - 1){
+                index = 0;
+            }
+            if(index<0){
+                index = imglis.length - 1;
+            }
+            //先把所有的current类去掉,然后给对一个的那个元素添加显示就行了
+            for(var i=0;i<imglis.length;i++){
+                imglis[i].removeAttribute("class");
+            }
+            imglis[index].setAttribute("class","current");
+            //更新指示器状态
+            for(var i=0;i<circles.length;i++){
+                circles[i].removeAttribute("class");
+            }
+            //设置指示器高亮
+            circles[index].setAttribute("class","current");
+        }
+        //3.点击指示器切换图片
+        for(var i=0;i<circles.length;i++){
+            (function(i){
+                circles[i].onclick = function(){
+                    index = i;
+                    changePic();
+                }
+            })(i);
+        }
+        
+    </script>
+</body>
+</html>

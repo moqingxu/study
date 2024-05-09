@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用循环写出100以内的奇数的和及偶数的和</title>
+</head>
+<body>
+    <script>
+        //本次代码是比较简单地利用了for循环，如果说利用for循环，然后用if循环辨别
+        //也是一种写法，有兴趣的可以采用多种写法
+        var s1=0;
+        var s2=0;
+        //100以内不包括100的话就写<,如果包含就写<=
+        // 奇数
+        for (var odd= 1; odd < 100; odd+=2) {
+            s1+=odd;
+        }
+        document.write("100以内的奇数之和为"+s1+"<br/>");
+        //偶数
+        for (var even= 0; even < 100; even+=2) {
+            s2+=even;
+        }
+        document.write("100以内的偶数之和为"+s2);
+    </script>
+</body>
+</html>

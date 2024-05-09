@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判断一个人的年龄是否满18岁(是否成年)</title>
+</head>
+<body>
+    <script>
+        /** 判断一个人的年龄是否满18岁(是否成年)
+            成年：大于等于18岁
+            未成年：小于18岁**/
+        //这个数字可以自己定义，根据情况，我分别设置了223、23和13，对应着三种情况
+        var age=13;
+        if (age>140||age<0) {
+            alert("请输入正确年龄");
+        } 
+        else {
+            if (age>=18) {
+                alert(age+"是成年人");
+            } else {
+                alert(age+"是未成年");
+            }
+        }
+    </script>
+</body>
+</html>

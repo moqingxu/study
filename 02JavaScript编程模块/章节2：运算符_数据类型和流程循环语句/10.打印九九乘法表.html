@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打印九九乘法表</title>
+</head>
+<body>
+    <script>
+        //注意：千万不要将i,j设置为0，九九乘法表时从1开始的
+        for (var i = 1; i <= 9; i++) {
+            document.write("<br/>");
+            for (var j = 1; j <=i; j++) {
+                var s=i*j;
+                document.write(i+"*"+j+"="+s+"    ");
+            }
+        }
+    </script>
+</body>
+</html>

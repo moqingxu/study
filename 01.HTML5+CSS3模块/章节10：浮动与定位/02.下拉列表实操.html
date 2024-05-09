@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉列表实操</title>
+    <style>
+        /* 导航栏宽高设置，设置为相对定位 */
+        .nav{
+            width: 100%;
+            height: 60px;
+            position: relative;
+        }
+        /* 溢出部分隐藏，清除所有浮动 */
+        .nav ul{
+            overflow: hidden;
+            clear: both;
+        }
+        /* 后代选择器，选择.nav包含的所有li标签的css样式 */
+        /* 取消列表的样式，设置左浮动，为了让列表之间有空隙，设置外边距 */
+        .nav ul li{
+            list-style: none;
+            float: left;
+            padding: 20px 25px;
+        }
+        /* 取消超链接文本的下划线，设置超链接文字的颜色 */
+        .nav ul li a{
+            color:black;
+            text-decoration: none;
+        }
+        /* 设置手机，配件等界面的下拉列表块，将这个块的宽高设置以下，设置背景颜色，以及确定绝对定位 */
+        .nav-list{
+            width: 100%;
+            height: 300px;
+            background-color: blue;
+            position: absolute;
+            /* 使浏览器无论如何拉伸，都能保持从左至右，从上至下整个块都能全部显示 */
+            left: 0;
+            /* 隐藏，不显示为块级元素 */
+            display: none;
+        }
+        /* >子代选择器:其直接子元素 将其显示为块级元素 */
+        .nav li:hover>.nav-list{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">首页</a>
+                  <!-- 鼠标滑下去的界面，也就是图片产品的界面 -->
+                <div class="nav-list" style="background-color: red;">
+                </div>
+            </li>
+          
+            <li>
+                <a href="#">手机</a>
+                <div class="nav-list" style="background-color: green;">
+                </div>
+            </li>
+            <li>
+                <a href="#">配件</a>
+                <div class="nav-list" style="background-color: blue;">
+                </div>
+            </li>
+            <li>
+                <a href="#">服务</a>
+                <div class="nav-list" style="background-color: yellow;">
+                </div>
+            </li>
+            <li>
+                <a href="#">下载</a>
+                <div class="nav-list" style="background-color: gray;">
+                </div>
+            </li>
+           
+            
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>定位练习</title>
+<style type="text/css">
+.box{
+    width :290px;
+    height: 300px;
+    background-color:pink;
+    position: relative;
+    /* 将溢出部分隐藏掉*/
+    overflow: hidden;
+}
+.box>img{
+    width: 120px;
+    /* 绝对定位 相对于已经定位的父元素定位 */
+    position: absolute;
+    /* 距父元素上面的距离为300px */
+    top:23px;
+    /* 距父元素左侧的距离为0 */
+    left:85px;
+    }
+    /* 当鼠标悬停在box盒子上,子代box1 */
+    .box:hover>.img1{
+    /*距父元素上面的距离变为224px */
+    left: 55px;
+}
+    .box:hover>.img2{
+    /*距父元素左侧的距离变为135px */
+    left: 135px;
+    /* right: 55px;
+    不能写成right，两者具有优先级的效应，不能这样*/
+}
+</style>
+</head>
+<body>
+    <div class="box">
+        <img src="img/3.jpg" alt="" class="img1">
+        <img src="img/4.jpg" alt="" class="img2">
+    </div>
+</body>
+</html>

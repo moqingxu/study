@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用数学函数实现一个数组的最大值和最小值</title>
+</head>
+<body>
+    <script>
+        //预定义一些名字，用于后面进行随机
+        const name=["保罗","九零","编程","微风啊","身份是","双丰收","微软","百姓"];
+        //定义函数来生成随机名字
+        function RandomName() {
+            //使用 Math.random() 方法生成一个0到1之间的随机数，
+            //将其乘以名字列表的长度（name.length）来获取一个随机的数组索引
+            const randomIndex=Math.floor(Math.random()*name.length);
+            //最后返回该索引对应的名字
+            return name[randomIndex];
+        }
+        //测试随机数组
+        console.log(RandomName());
+    </script>
+</body>
+</html>
